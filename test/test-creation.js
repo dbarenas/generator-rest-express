@@ -23,7 +23,15 @@ describe('express-rest generator', function () {
     var expected = [
       // add files you expect to exist here.
       '.jshintrc',
-      '.editorconfig'
+	  '.travis.yml',
+	  'package.json',
+	  'lib/db.js',
+	  'public/stylesheets/style.css',
+	  'routes/index.js',
+	  'views/index.jade',
+	  'views/layout.jade',
+	  'lib/db.js',
+	  'lib/log.js'
     ];
 
     helpers.mockPrompt(this.app, {
