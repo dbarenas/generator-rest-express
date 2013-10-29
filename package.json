@@ -1,0 +1,41 @@
+{
+  "name": "generator-express-rest",
+  "version": "0.1.0",
+  "description": "Build a REST API in minutes using Express + MongoDB",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "homepage": "https://github.com/brianviveiros/generator-express-rest",
+  "bugs": "https://github.com/brianviveiros/generator-express-rest/issues",
+  "author": {
+    "name": "Brian Viveiros",
+    "email": "brianlovescode@gmail.com",
+    "url": "https://github.com/brianviveiros"
+  },
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brianviveiros/generator-express-rest.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "yeoman-generator": "~0.13.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.12.0"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0-rc.1"
+  },
+  "engines": {
+    "node": ">=0.8.0",
+    "npm": ">=1.2.10"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
+}
