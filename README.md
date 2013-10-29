@@ -28,52 +28,63 @@ If you wish to customize the code that has been generated, here's where to look:
 * The quries are defined in resource/<resource>.js
 
 ## MongoDB Connection
-Mongoose is currently being used as the MongoDB driver. The file _lib/db.js_ contains the connection and schema definition.
+Mongoose is currently being used as the MongoDB driver. The file **lib/db.js** contains the connection and schema definition.
 
 ## Logging
-A basic logger is created, the details are in the file _lib/log.js_.  By default it creates a log file named logs/development.log.  If the environment variable NODE_ENV is set to 'production' then the file will be named logs/production.log.
+A basic logger is created, the details are in the file **lib/log.js**.  By default it creates a log file named logs/development.log.  If the environment variable NODE_ENV is set to 'production' then the file will be named logs/production.log.
 
 ## Dependencies
-1 Make sure you have [yo](https://github.com/yeoman/yo) installed on the latest version.
+1. Make sure you have [yo](https://github.com/yeoman/yo) installed on the latest version.
 	```bash
 	$ npm install -g yo
 	```
-1 Ensure that [MongoDB](http://www.mongodb.org/) is installed and running.
+1. Ensure that [MongoDB](http://www.mongodb.org/) is installed and running.
 
 ## Getting started
-1 Install the generator: `npm install -g generator-express-rest`
+1. Install the generator
+
 	```bash
 	$ npm install -g generator-express-rest
 	```
-1 Create a project directory and run the generator
+	
+1. Create a project directory and run the generator
+
 	```bash
 	$ mkdir myApp
 	$ yo express-rest
 	```
-1 Reply to the prompts asking you for your MongoDB connection details
+	
+1. Reply to the prompts asking you for your MongoDB connection details
+
 	```bash
 	$ [?] IP address where MongoDB is running? (127.0.0.1)
 	$ [?] Database name? (myApp)
 	```
-1 Generate your first resource API
+	
+1. Generate your first resource API
+
 	```bash
 	$ yo express-rest:resource user
 	```
-1 Start your node server
+	
+1. Start your node server
+
 	```bash
 	$ node app.js
 	```
-1 Create a few resources using curl
+	
+1. Create a few resources using curl
+
 	```bash
 	$ curl -d "firstname=Brian" http://localhost:3000/users
 	$ curl -d "firstname=Jerry" http://localhost:3000/users
 	```
-1 Retreive the list resources using curl
+	
+1. Retreive the list resources using curl
+
 	```bash
 	$ curl http://localhost:3000/users
 	```
-
-**Happy Coding!**
 
 ## License
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
