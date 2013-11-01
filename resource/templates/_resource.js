@@ -19,7 +19,7 @@ exports.get = function(req, res){
 	var id = req.params.id;
 	<%= nameCapitalized %>.findOne({_id: id}, function(err, data) {
 		if (err) {
-			logger.error(module + " get err=" + err);
+			logger.error(err);
 			res.send(err);
 		} else {
 			if (data) {
@@ -37,7 +37,7 @@ exports.update = function(req, res) {
 	var id = req.params.id;
 	<%= nameCapitalized %>.findByIdAndUpdate(id, req.body, function(err) {
 		if (!err) {
-			logger.info(module + " update success");
+			logger.info("update success");
 			res.send(200);
 		} else {
 			logger.error(err);
@@ -52,13 +52,13 @@ exports.delete = function(req, res) {
 	var id = req.params.id;
 	<%= nameCapitalized %>.findOne({_id: id}, function(err, data) {
 		if (err) {
-			logger.error(module + " delete err=" + err);
+			logger.error(err);
 			res.send(err);
 		} else {
 			if (data) {
 				data.remove(function(err, data) {
 					if (err) {
-						logger.error(module + " delete err=" + err);
+						logger.error(err);
 						res.send(err);
 					} else {
 						res.send(data);
@@ -76,7 +76,7 @@ exports.delete = function(req, res) {
 exports.list = function (req, res) {
 	<%= nameCapitalized %>.find({}, function(err, data) {
 		if (err) {
-			logger.error(module + " get err=" + err);
+			logger.error(err);
 			res.send(err);
 		} else {
 			res.send(data);
