@@ -43,13 +43,13 @@ ResourceGenerator.prototype.addResourceToApp = function (resource) {
 	var resourceName = resource.toLowerCase();
 	var resourcePlural = resourceName + "s";
 	
-	var fullPath = 'app.js';
+	var fullPath = './routes/index.js';
     angularUtils.rewriteFile({
       file: fullPath,
       needle: '// end resources',
       splicable: [
 	  	"// -- " + resourceName + " --",
-        "var " + resourceName + " = require('./resources/" + resourceName + ".js');\n",
+        "var " + resourceName + " = require('../resources/" + resourceName + ".js');\n",
 		"app.post('/" + resourcePlural + "', " + resourceName + ".create);\t\t// Create",
 		"app.get('/" + resourcePlural + "/:id', " + resourceName + ".get);\t\t// Read",
 		"app.put('/" + resourcePlural + "/:id', " + resourceName + ".update);\t\t// Update",

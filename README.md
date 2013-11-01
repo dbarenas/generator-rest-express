@@ -23,7 +23,7 @@ All CRUD APIs follow the convention:
 </table>
 
 If you wish to customize the code that has been generated, here's where to look:
-* The routes are defined in app.js
+* The routes are defined in ./routes/index.js
 * The Schema is defined in lib/db.js
 * The quries are defined in resource/<resource>.js
 

@@ -3,6 +3,16 @@
  * GET home page.
  */
 
-exports.index = function(req, res){
+var index = function(req, res){
   res.render('index', { title: 'Express' });
 };
+
+module.exports = exports = function(app) {
+
+	// Homepage
+	app.get('/', index);
+
+	// begin resources
+
+	// end resources
+}
