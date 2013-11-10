@@ -5,14 +5,14 @@ var path    = require('path');
 var helpers = require('yeoman-generator').test;
 
 
-describe('express-rest generator', function () {
+describe('rest-express generator', function () {
   beforeEach(function (done) {
     helpers.testDirectory(path.join(__dirname, 'temp'), function (err) {
       if (err) {
         return done(err);
       }
 
-      this.app = helpers.createGenerator('express-rest:app', [
+      this.app = helpers.createGenerator('rest-express:app', [
         '../../app'
       ]);
       done();

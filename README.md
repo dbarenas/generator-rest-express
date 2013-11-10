@@ -1,10 +1,10 @@
-# Express + MongoDB REST API Generator [![Build Status](https://secure.travis-ci.org/brianviveiros/generator-express-rest.png?branch=master)](https://travis-ci.org/brianviveiros/generator-express-rest)
+# Express + MongoDB REST API Generator [![Build Status](https://secure.travis-ci.org/brianviveiros/generator-rest-express.png?branch=master)](https://travis-ci.org/brianviveiros/generator-express-rest)
 
 A [Yeoman](http://yeoman.io) generator for building a REST API in minutes using Express + MongoDB.
 
 The main generator will scaffold a project that is identical to the express command line generator as of express 3.4.2.
 
-The express-rest generator adds the following:
+The rest-rest generator adds the following:
 1 A resource generator for generating the routes and queries required to offer basic CRUD operations on the resource.
 2 Scaffolding for a connection to a MongoDB instance using the Mongoose driver.
 3 A basic logger using winston
@@ -44,14 +44,14 @@ A basic logger is created, the details are in the file **lib/log.js**.  By defau
 1. Install the generator
 
 	```bash
-	$ npm install -g generator-express-rest
+	$ npm install -g generator-rest-express
 	```
 	
 1. Create a project directory and run the generator
 
 	```bash
 	$ mkdir myApp
-	$ yo express-rest
+	$ yo rest-express
 	```
 	
 1. Reply to the prompts asking you for your MongoDB connection details
@@ -64,7 +64,7 @@ A basic logger is created, the details are in the file **lib/log.js**.  By defau
 1. Generate your first resource API
 
 	```bash
-	$ yo express-rest:resource user
+	$ yo rest-express:resource user
 	```
 	
 1. Start your node server
